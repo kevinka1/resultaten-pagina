@@ -1,7 +1,10 @@
 ﻿
+using System.Windows.Forms;
+
 namespace Meetmoment_1
 {
     partial class Form1
+
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,10 +33,11 @@ namespace Meetmoment_1
         private void InitializeComponent()
         {
             this.vlak = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.opslaanknop = new System.Windows.Forms.Button();
+            this.beoordelingAntwoord = new System.Windows.Forms.ComboBox();
+            this.BeoordelingspuntLabel = new System.Windows.Forms.Label();
+            this.terug = new System.Windows.Forms.Button();
+            this.verder = new System.Windows.Forms.Button();
             this.vlak.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,60 +47,75 @@ namespace Meetmoment_1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.vlak.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.vlak.Controls.Add(this.comboBox1);
-            this.vlak.Controls.Add(this.label1);
-            this.vlak.Controls.Add(this.button2);
-            this.vlak.Controls.Add(this.button1);
+            this.vlak.Controls.Add(this.opslaanknop);
+            this.vlak.Controls.Add(this.beoordelingAntwoord);
+            this.vlak.Controls.Add(this.BeoordelingspuntLabel);
+            this.vlak.Controls.Add(this.terug);
+            this.vlak.Controls.Add(this.verder);
             this.vlak.Location = new System.Drawing.Point(214, 96);
             this.vlak.Name = "vlak";
             this.vlak.Size = new System.Drawing.Size(350, 223);
             this.vlak.TabIndex = 0;
             // 
-            // button2
+            // opslaanknop
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.BackColor = System.Drawing.Color.Silver;
-            this.button2.Location = new System.Drawing.Point(3, 191);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "terug";
-            this.button2.UseVisualStyleBackColor = false;
+            this.opslaanknop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.opslaanknop.BackColor = System.Drawing.Color.Silver;
+            this.opslaanknop.Location = new System.Drawing.Point(128, 97);
+            this.opslaanknop.Name = "opslaanknop";
+            this.opslaanknop.Size = new System.Drawing.Size(94, 29);
+            this.opslaanknop.TabIndex = 5;
+            this.opslaanknop.Text = "opslaan";
+            this.opslaanknop.UseVisualStyleBackColor = false;
+            this.opslaanknop.Visible = false;
             // 
-            // button1
+            // beoordelingAntwoord
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.Location = new System.Drawing.Point(253, 191);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "verder";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "klantgericht";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.beoordelingAntwoord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.beoordelingAntwoord.FormattingEnabled = true;
+            this.beoordelingAntwoord.Items.AddRange(new object[] {
             "O",
             "V",
             "G"});
-            this.comboBox1.Location = new System.Drawing.Point(253, 29);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(59, 28);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.Text = "kies";
+            this.beoordelingAntwoord.Location = new System.Drawing.Point(253, 29);
+            this.beoordelingAntwoord.Name = "beoordelingAntwoord";
+            this.beoordelingAntwoord.Size = new System.Drawing.Size(59, 28);
+            this.beoordelingAntwoord.TabIndex = 4;
+            this.beoordelingAntwoord.Text = "kies";
+            this.beoordelingAntwoord.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // BeoordelingspuntLabel
+            // 
+            this.BeoordelingspuntLabel.AutoSize = true;
+            this.BeoordelingspuntLabel.Location = new System.Drawing.Point(10, 29);
+            this.BeoordelingspuntLabel.Name = "BeoordelingspuntLabel";
+            this.BeoordelingspuntLabel.Size = new System.Drawing.Size(87, 20);
+            this.BeoordelingspuntLabel.TabIndex = 3;
+            this.BeoordelingspuntLabel.Text = "klantgericht";
+            // 
+            // terug
+            // 
+            this.terug.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.terug.BackColor = System.Drawing.Color.Silver;
+            this.terug.Location = new System.Drawing.Point(3, 191);
+            this.terug.Name = "terug";
+            this.terug.Size = new System.Drawing.Size(94, 29);
+            this.terug.TabIndex = 2;
+            this.terug.Text = "terug";
+            this.terug.UseVisualStyleBackColor = false;
+            this.terug.Click += new System.EventHandler(this.terug_Click);
+            // 
+            // verder
+            // 
+            this.verder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.verder.BackColor = System.Drawing.Color.Silver;
+            this.verder.Location = new System.Drawing.Point(253, 191);
+            this.verder.Name = "verder";
+            this.verder.Size = new System.Drawing.Size(94, 29);
+            this.verder.TabIndex = 1;
+            this.verder.Text = "verder";
+            this.verder.UseVisualStyleBackColor = false;
+            this.verder.Click += new System.EventHandler(this.verder_Click);
             // 
             // Form1
             // 
@@ -116,10 +135,12 @@ namespace Meetmoment_1
         #endregion
 
         private System.Windows.Forms.Panel vlak;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button verder;
+        private System.Windows.Forms.Button terug;
+        private System.Windows.Forms.ComboBox beoordelingAntwoord;
+        private System.Windows.Forms.Label BeoordelingspuntLabel;
+        private Button opslaanknop;
     }
 }
+
 
