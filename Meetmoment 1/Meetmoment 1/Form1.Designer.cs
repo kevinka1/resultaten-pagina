@@ -47,6 +47,7 @@ namespace Meetmoment_1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.vlak.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.vlak.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vlak.Controls.Add(this.opslaanknop);
             this.vlak.Controls.Add(this.beoordelingAntwoord);
             this.vlak.Controls.Add(this.BeoordelingspuntLabel);
@@ -56,18 +57,20 @@ namespace Meetmoment_1
             this.vlak.Name = "vlak";
             this.vlak.Size = new System.Drawing.Size(350, 223);
             this.vlak.TabIndex = 0;
+            this.vlak.Paint += new System.Windows.Forms.PaintEventHandler(this.vlak_Paint);
             // 
             // opslaanknop
             // 
             this.opslaanknop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.opslaanknop.BackColor = System.Drawing.Color.Silver;
-            this.opslaanknop.Location = new System.Drawing.Point(128, 97);
+            this.opslaanknop.Location = new System.Drawing.Point(128, 95);
             this.opslaanknop.Name = "opslaanknop";
             this.opslaanknop.Size = new System.Drawing.Size(94, 29);
             this.opslaanknop.TabIndex = 5;
             this.opslaanknop.Text = "opslaan";
             this.opslaanknop.UseVisualStyleBackColor = false;
             this.opslaanknop.Visible = false;
+            this.opslaanknop.Click += new System.EventHandler(this.opslaanknop_Click);
             // 
             // beoordelingAntwoord
             // 
@@ -77,7 +80,7 @@ namespace Meetmoment_1
             "O",
             "V",
             "G"});
-            this.beoordelingAntwoord.Location = new System.Drawing.Point(253, 29);
+            this.beoordelingAntwoord.Location = new System.Drawing.Point(251, 29);
             this.beoordelingAntwoord.Name = "beoordelingAntwoord";
             this.beoordelingAntwoord.Size = new System.Drawing.Size(59, 28);
             this.beoordelingAntwoord.TabIndex = 4;
@@ -97,7 +100,7 @@ namespace Meetmoment_1
             // 
             this.terug.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.terug.BackColor = System.Drawing.Color.Silver;
-            this.terug.Location = new System.Drawing.Point(3, 191);
+            this.terug.Location = new System.Drawing.Point(3, 189);
             this.terug.Name = "terug";
             this.terug.Size = new System.Drawing.Size(94, 29);
             this.terug.TabIndex = 2;
@@ -109,7 +112,7 @@ namespace Meetmoment_1
             // 
             this.verder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.verder.BackColor = System.Drawing.Color.Silver;
-            this.verder.Location = new System.Drawing.Point(253, 191);
+            this.verder.Location = new System.Drawing.Point(251, 189);
             this.verder.Name = "verder";
             this.verder.Size = new System.Drawing.Size(94, 29);
             this.verder.TabIndex = 1;

@@ -131,5 +131,15 @@ namespace Meetmoment_1
                 verder.Visible = false;
             }
         }
+
+        private void vlak_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void opslaanknop_Click(object sender, EventArgs e)
+        {
+            //string strResultJson = JsonConvert.SerializeObject
+        }
     }
 }
