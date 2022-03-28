@@ -139,7 +139,17 @@ namespace Meetmoment_1
 
         private void opslaanknop_Click(object sender, EventArgs e)
         {
-            //string strResultJson = JsonConvert.SerializeObject
+            gegevens gegevens = new gegevens()
+            {
+                klantgericht = antwoord1,
+                proces = antwoord2,
+                planning = antwoord3
+            };
+            
+            string strResultJson = Newtonsoft.Json.JsonConvert.SerializeObject(gegevens);
+            System.IO.File.WriteAllText(@"gegevens.json", strResultJson);
+            MessageBox.Show("opgeslaagd");
+
         }
     }
 }
