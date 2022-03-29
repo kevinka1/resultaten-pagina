@@ -17,6 +17,16 @@ namespace Meetmoment_1
 
         private void resultaten_Load(object sender, EventArgs e)
         {
+            
+            
+            // rij aanmaken
+            string[] row = { "O", "V", "G", "A", "B", "C" };
+            
+            // listview item aanmaken
+            var listViewItem = new ListViewItem(row);
+
+            // listview item toevoegen aan de listview
+            UitslagenListView.Items.Add(listViewItem);
 
         }
 
@@ -46,6 +56,14 @@ namespace Meetmoment_1
         }
 
         private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+        
+
+
+
+        }
+
+        private void UitslagenListView_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
