@@ -144,12 +144,17 @@ namespace Meetmoment_1
             {
                 klantgericht = antwoord1,
                 proces = antwoord2,
-                planning = antwoord3
+                planning = antwoord3,
+                standup = antwoord4,
+                beroepscompententie = antwoord5,
+                samenwerking = antwoord6,
+                beroepshouding = antwoord7,
             };
             
             string strResultJson = Newtonsoft.Json.JsonConvert.SerializeObject(gegevens);
             System.IO.File.WriteAllText(@"gegevens.json", strResultJson);
             MessageBox.Show("opgeslaagd");
+            
 
         }
     }

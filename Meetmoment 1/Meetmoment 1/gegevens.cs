@@ -7,6 +7,10 @@
             public string klantgericht { get; set; }
             public string proces { get; set; }
             public string planning { get; set; }
+            public string standup { get; internal set; }
+            public string beroepscompententie { get; internal set; }
+            public string beroepshouding { get; internal set; }
+            public string samenwerking { get; internal set; }
         }
     }
 }
