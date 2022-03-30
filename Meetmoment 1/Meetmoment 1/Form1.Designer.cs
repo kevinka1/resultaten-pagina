@@ -1,5 +1,4 @@
-﻿
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Meetmoment_1
 {
@@ -13,8 +12,7 @@ namespace Meetmoment_1
 
         /// <summary>
         ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// </summary>/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>  ///
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -69,6 +67,9 @@ namespace Meetmoment_1
             this.opslaanknop.TabIndex = 5;
             this.opslaanknop.Text = "opslaan";
             this.opslaanknop.UseVisualStyleBackColor = false;
+
+
+
             this.opslaanknop.Visible = false;
             this.opslaanknop.Click += new System.EventHandler(this.opslaanknop_Click);
             // 
@@ -121,6 +122,7 @@ namespace Meetmoment_1
             this.verder.Click += new System.EventHandler(this.verder_Click);
             // 
             // Form1
+
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,7 +134,6 @@ namespace Meetmoment_1
             this.vlak.ResumeLayout(false);
             this.vlak.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion
