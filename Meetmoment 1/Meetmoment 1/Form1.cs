@@ -153,8 +153,7 @@ namespace Meetmoment_1
             
             string strResultJson = Newtonsoft.Json.JsonConvert.SerializeObject(gegevens);
             System.IO.File.WriteAllText(@"gegevens.json", strResultJson);
-            MessageBox.Show("opgeslaagd");
-            
+            MessageBox.Show("opgeslagen");
 
         }
     }
