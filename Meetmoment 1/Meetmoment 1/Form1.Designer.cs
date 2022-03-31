@@ -31,6 +31,8 @@ namespace Meetmoment_1
         private void InitializeComponent()
         {
             this.vlak = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pjn = new System.Windows.Forms.TextBox();
             this.opslaanknop = new System.Windows.Forms.Button();
             this.beoordelingAntwoord = new System.Windows.Forms.ComboBox();
             this.BeoordelingspuntLabel = new System.Windows.Forms.Label();
@@ -46,6 +48,8 @@ namespace Meetmoment_1
             | System.Windows.Forms.AnchorStyles.Right)));
             this.vlak.BackColor = System.Drawing.SystemColors.ControlLight;
             this.vlak.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.vlak.Controls.Add(this.label1);
+            this.vlak.Controls.Add(this.pjn);
             this.vlak.Controls.Add(this.opslaanknop);
             this.vlak.Controls.Add(this.beoordelingAntwoord);
             this.vlak.Controls.Add(this.BeoordelingspuntLabel);
@@ -57,19 +61,35 @@ namespace Meetmoment_1
             this.vlak.TabIndex = 0;
             this.vlak.Paint += new System.Windows.Forms.PaintEventHandler(this.vlak_Paint);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(121, 75);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "projectnaam";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // projectnaam
+            // 
+            this.pjn.Location = new System.Drawing.Point(121, 98);
+            this.pjn.Name = "projectnaam";
+            this.pjn.Size = new System.Drawing.Size(125, 27);
+            this.pjn.TabIndex = 6;
+            this.pjn.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.pjn.Leave += new System.EventHandler(this.projectnaam_Leave);
+            // 
             // opslaanknop
             // 
             this.opslaanknop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.opslaanknop.BackColor = System.Drawing.Color.Silver;
-            this.opslaanknop.Location = new System.Drawing.Point(128, 95);
+            this.opslaanknop.Location = new System.Drawing.Point(251, 154);
             this.opslaanknop.Name = "opslaanknop";
             this.opslaanknop.Size = new System.Drawing.Size(94, 29);
             this.opslaanknop.TabIndex = 5;
             this.opslaanknop.Text = "opslaan";
             this.opslaanknop.UseVisualStyleBackColor = false;
-
-
-
             this.opslaanknop.Visible = false;
             this.opslaanknop.Click += new System.EventHandler(this.opslaanknop_Click);
             // 
@@ -81,7 +101,7 @@ namespace Meetmoment_1
             "O",
             "V",
             "G"});
-            this.beoordelingAntwoord.Location = new System.Drawing.Point(251, 29);
+            this.beoordelingAntwoord.Location = new System.Drawing.Point(251, 38);
             this.beoordelingAntwoord.Name = "beoordelingAntwoord";
             this.beoordelingAntwoord.Size = new System.Drawing.Size(59, 28);
             this.beoordelingAntwoord.TabIndex = 4;
@@ -91,11 +111,12 @@ namespace Meetmoment_1
             // BeoordelingspuntLabel
             // 
             this.BeoordelingspuntLabel.AutoSize = true;
-            this.BeoordelingspuntLabel.Location = new System.Drawing.Point(10, 29);
+            this.BeoordelingspuntLabel.Location = new System.Drawing.Point(10, 38);
             this.BeoordelingspuntLabel.Name = "BeoordelingspuntLabel";
             this.BeoordelingspuntLabel.Size = new System.Drawing.Size(87, 20);
             this.BeoordelingspuntLabel.TabIndex = 3;
             this.BeoordelingspuntLabel.Text = "klantgericht";
+            this.BeoordelingspuntLabel.Click += new System.EventHandler(this.BeoordelingspuntLabel_Click);
             // 
             // terug
             // 
@@ -122,7 +143,6 @@ namespace Meetmoment_1
             this.verder.Click += new System.EventHandler(this.verder_Click);
             // 
             // Form1
-
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,6 +154,7 @@ namespace Meetmoment_1
             this.vlak.ResumeLayout(false);
             this.vlak.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -144,6 +165,9 @@ namespace Meetmoment_1
         private System.Windows.Forms.ComboBox beoordelingAntwoord;
         private System.Windows.Forms.Label BeoordelingspuntLabel;
         private Button opslaanknop;
+        private TextBox textBox1;
+        private Label label1;
+        private TextBox pjn;
     }
 }
 

@@ -19,7 +19,6 @@ namespace Meetmoment_1
         {
             
             
-
             // rij aanmaken
             string[] row = { "O", "V", "G", "A", "B", "C" };
             
