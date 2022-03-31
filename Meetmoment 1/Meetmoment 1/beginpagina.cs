@@ -24,14 +24,14 @@ namespace Meetmoment_1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            resultaten resultaten = new resultaten();
+            Form2 resultaten = new Form2();
 
             resultaten.ShowDialog();
         }
 
         private void beginpagina_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

@@ -155,6 +155,17 @@ namespace Meetmoment_1
             System.IO.File.WriteAllText(@"gegevens.json", strResultJson);
             MessageBox.Show("opgeslagen");
 
+
+
+            // json bestand regel inlezen
+
+            // json string inlezen
+
+            // Deserialize naar gegeevens object
+
+            // lijst vullen met object
+
+
         }
     }
 }
