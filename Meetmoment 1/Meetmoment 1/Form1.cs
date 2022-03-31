@@ -21,8 +21,7 @@ namespace Meetmoment_1
         string antwoord5 = "";
         string antwoord6 = "";
         string antwoord7 = "";
-
-
+        string pojn = "";
 
         public Form1()
         {
@@ -84,7 +83,7 @@ namespace Meetmoment_1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void terug_Click(object sender, EventArgs e)
@@ -146,26 +145,40 @@ namespace Meetmoment_1
                 proces = antwoord2,
                 planning = antwoord3,
                 standup = antwoord4,
-                beroepscompententie = antwoord5,
+                beroepscompetentie = antwoord5,
                 samenwerking = antwoord6,
                 beroepshouding = antwoord7,
+                projectnaam = pojn,
             };
             
             string strResultJson = Newtonsoft.Json.JsonConvert.SerializeObject(gegevens);
             System.IO.File.WriteAllText(@"gegevens.json", strResultJson);
             MessageBox.Show("opgeslagen");
 
+            beginpagina resultaten = new beginpagina();
 
+            resultaten.ShowDialog();
 
-            // json bestand regel inlezen
+        }
 
-            // json string inlezen
+        private void BeoordelingspuntLabel_Click(object sender, EventArgs e)
+        {
 
-            // Deserialize naar gegeevens object
+        }
 
-            // lijst vullen met object
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void projectnaam_Leave(object sender, EventArgs e)
+        {
+            pojn = pjn.Text;
         }
     }
 }
